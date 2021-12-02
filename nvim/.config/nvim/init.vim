@@ -16,6 +16,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Completion
 Plug 'SirVer/ultisnips'
 Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Appearance
 " -----------------------------------------------------------------------------
