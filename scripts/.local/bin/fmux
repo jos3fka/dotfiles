@@ -6,7 +6,8 @@ else
 	items="$(find ~/git -maxdepth 1 -type d ! -iname ".*")
 $(find ~/dotfiles -maxdepth 1 -type d ! -iname ".*")
 $(find ~/development -maxdepth 2 -type d ! -iname ".*")
-$(find ~/work -maxdepth 2 -type d ! -iname ".*")"
+$(find ~/work -maxdepth 2 -type d ! -iname ".*")
+$(find ~/.local/share/nvim/plugged/ -maxdepth 1 -type d ! -iname ".*")"
     selected=$(echo "$items" | fzf --print-query | tail -n 1)
 fi
 

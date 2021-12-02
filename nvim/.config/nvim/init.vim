@@ -62,6 +62,7 @@ Plug 'tpope/vim-sleuth'
 " Misc
 " -----------------------------------------------------------------------------
 Plug 'nvim-treesitter/playground'
+Plug 'stevearc/vim-arduino'
 
 call plug#end()
 
