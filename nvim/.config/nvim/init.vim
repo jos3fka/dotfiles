@@ -17,15 +17,18 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fannheyward/telescope-coc.nvim'
 
 " Appearance
 " -----------------------------------------------------------------------------
 Plug 'rktjmp/lush.nvim'
-Plug 'npxbr/gruvbox.nvim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
+
 
 " Navigation
 " -----------------------------------------------------------------------------

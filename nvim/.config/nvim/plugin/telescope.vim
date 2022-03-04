@@ -9,12 +9,10 @@ nnoremap <leader>fw :lua require('telescope.builtin').grep_string { search = vim
 nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <leader>fr :lua require('telescope.builtin').oldfiles()<CR>
 nnoremap <leader>fc :lua require('telescope.builtin').command_history()<CR>
-nnoremap <leader>fls :lua require('telescope.builtin').lsp_document_symbols()<CR>
-nnoremap <leader>fld :lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>
-nnoremap <leader>flc :lua require('telescope.builtin').code_actions()<CR>
+nnoremap <leader>fls :lua require('telescope').load_extension('coc').document_symbols()<CR>
+nnoremap <leader>fld :lua require('telescope').load_extension('coc').workspace_diagnostics()<CR>
+nnoremap <leader>flc :lua require('telescope').load_extension('coc').code_actions()<CR>
 nnoremap <leader>fh :lua require('telescope.builtin').help_tags()<CR>
-nnoremap <leader>ft :lua require('jos3fka.telescope').search_templates()<CR>
-nnoremap <leader>fv :lua require('jos3fka.telescope').search_vim()<CR>
 
 lua << EOF
 require('telescope').setup{
