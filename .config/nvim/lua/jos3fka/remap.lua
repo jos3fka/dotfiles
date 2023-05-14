@@ -8,7 +8,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Exit terminal mode
-vim.keymap.set({"t", "n"}, "<C-6>", "<C-\\><C-n><C-^>")
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- Format buffer
 vim.keymap.set("n", "<leader>fi", vim.lsp.buf.format)

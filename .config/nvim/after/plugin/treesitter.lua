@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "javascript", "python", "latex" },
+  ensure_installed = { "java", "c", "lua", "vim", "javascript", "python", "latex" },
 
   -- Workaround for broken python file indentation
   indent = {

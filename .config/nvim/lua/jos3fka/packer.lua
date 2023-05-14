@@ -12,10 +12,7 @@ return require('packer').startup(function(use)
     use { "ellisonleao/gruvbox.nvim" }
 
 
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        { run = ':TSUpdate' }
-    }
+    use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
 
     use 'nvim-treesitter/nvim-treesitter-context'
 
@@ -32,26 +29,33 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'VonHeikemen/lsp-zero.nvim', branch = 'v1.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            { 'williamboman/mason.nvim' }, -- Optional
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v2.x',
+      requires = {
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},             -- Required
+        {                                      -- Optional
+          'williamboman/mason.nvim',
+          run = function()
+            pcall(vim.cmd, 'MasonUpdate')
+          end,
+        },
+        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        {'mfussenegger/nvim-jdtls'},
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'hrsh7th/cmp-buffer' }, -- Optional
-            { 'hrsh7th/cmp-path' }, -- Optional
-            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-            { 'hrsh7th/cmp-nvim-lua' }, -- Optional
-
-            -- Snippets
-            { 'L3MON4D3/LuaSnip' }, -- Required
-            { 'rafamadriz/friendly-snippets' }, -- Optional
-        }
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},     -- Required
+        {'hrsh7th/cmp-nvim-lsp'}, -- Required
+        {'L3MON4D3/LuaSnip'},     -- Required
+        {'hrsh7th/cmp-path'},
+        {'hrsh7th/cmp-buffer'},
+        {'hrsh7th/cmp-nvim-lua'},
+        {'saadparwaiz1/cmp_luasnip'},
+        {'rafamadriz/friendly-snippets'},
+        {'onsails/lspkind.nvim'},
+      }
     }
+
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -82,5 +86,12 @@ return require('packer').startup(function(use)
     use 'normen/vim-pio'
     use 'xiyaowong/transparent.nvim'
     use 'christoomey/vim-tmux-navigator'
+
+    use {
+        "williamboman/mason.nvim",
+        "mfussenegger/nvim-dap",
+        "jay-babu/mason-nvim-dap.nvim",
+        "rcarriga/nvim-dap-ui",
+    }
 
 end)
