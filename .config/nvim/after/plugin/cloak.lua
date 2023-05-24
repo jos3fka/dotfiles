@@ -16,4 +16,4 @@ require('cloak').setup({
   },
 })
 
-vim.keymap.set("n", "<leader>ct", "<CMD>CloakToggle<CR>")
+vim.keymap.set("n", "<leader>tc", "<CMD>CloakToggle<CR>")

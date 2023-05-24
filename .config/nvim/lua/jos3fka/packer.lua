@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
         {'saadparwaiz1/cmp_luasnip'},
         {'rafamadriz/friendly-snippets'},
         {'onsails/lspkind.nvim'},
+        {'hrsh7th/cmp-nvim-lsp-signature-help'},
       }
     }
 
@@ -92,6 +93,9 @@ return require('packer').startup(function(use)
         "mfussenegger/nvim-dap",
         "jay-babu/mason-nvim-dap.nvim",
         "rcarriga/nvim-dap-ui",
+        "theHamsta/nvim-dap-virtual-text"
     }
+    use {'nvim-telescope/telescope-ui-select.nvim' }
+    use {'jedrzejboczar/possession.nvim'}
 
 end)

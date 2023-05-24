@@ -5,5 +5,5 @@ nvim_tree.setup({
     }
 })
 
-vim.keymap.set("n", "<leader>nt", function() vim.cmd(":NvimTreeToggle") end)
+vim.keymap.set("n", "<leader>tn", function() vim.cmd(":NvimTreeToggle") end)
 vim.keymap.set("n", "<leader>nf", function() vim.cmd(":NvimTreeFindFile") end)

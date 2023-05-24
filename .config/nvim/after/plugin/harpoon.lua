@@ -1,11 +1,18 @@
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 local term = require("harpoon.term")
+local telescope = require("telescope")
+
+telescope.load_extension("harpoon")
 
 vim.keymap.set("n", "<leader>ha", mark.add_file)
-vim.keymap.set("n", "<leader>hq", function() ui.toggle_quick_menu() end)
+vim.keymap.set("n", "<leader>hq", telescope.extensions.harpoon.marks)
 
-vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
-vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<leader>h1", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<leader>h2", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<leader>h3", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<leader>h4", function() ui.nav_file(4) end)
+vim.keymap.set("n", "<leader>h5", function() ui.nav_file(5) end)
 
-vim.keymap.set("n", "<leader>3", function() term.gotoTerminal(1) end)
+vim.keymap.set("n", "<leader>h6", function() term.gotoTerminal(1) end)
+

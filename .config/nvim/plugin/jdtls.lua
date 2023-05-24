@@ -119,8 +119,8 @@ local function enable_debugger(bufnr)
   require('jdtls.dap').setup_dap_main_class_configs()
 
   local opts = {buffer = bufnr}
-  vim.keymap.set('n', '<leader>vdtc', "<cmd>lua require('jdtls').test_class()<cr>", opts)
-  vim.keymap.set('n', '<leader>vdtm', "<cmd>lua require('jdtls').test_nearest_method()<cr>", opts)
+  vim.keymap.set('n', '<leader>dtc', "<cmd>lua require('jdtls').test_class()<cr>", opts)
+  vim.keymap.set('n', '<leader>dtm', "<cmd>lua require('jdtls').test_nearest_method()<cr>", opts)
 end
 
 local function jdtls_on_attach(client, bufnr)
@@ -136,12 +136,12 @@ local function jdtls_on_attach(client, bufnr)
   -- https://github.com/mfussenegger/nvim-jdtls#usage
   
   local opts = {buffer = bufnr}
-  vim.keymap.set('n', '<leader>voi', "<cmd>lua require('jdtls').organize_imports()<cr>", opts)
-  vim.keymap.set('n', '<leader>vev', "<cmd>lua require('jdtls').extract_variable()<cr>", opts)
-  vim.keymap.set('x', '<leader>vev', "<esc><cmd>lua require('jdtls').extract_variable(true)<cr>", opts)
-  vim.keymap.set('n', '<leader>vec', "<cmd>lua require('jdtls').extract_constant()<cr>", opts)
-  vim.keymap.set('x', '<leader>vec', "<esc><cmd>lua require('jdtls').extract_constant(true)<cr>", opts)
-  vim.keymap.set('x', '<leader>vem', "<esc><Cmd>lua require('jdtls').extract_method(true)<cr>", opts)
+  vim.keymap.set('n', '<leader>oi', "<cmd>lua require('jdtls').organize_imports()<cr>", opts)
+  --vim.keymap.set('n', '<leader>vev', "<cmd>lua require('jdtls').extract_variable()<cr>", opts)
+  --vim.keymap.set('x', '<leader>vev', "<esc><cmd>lua require('jdtls').extract_variable(true)<cr>", opts)
+  --vim.keymap.set('n', '<leader>vec', "<cmd>lua require('jdtls').extract_constant()<cr>", opts)
+  --vim.keymap.set('x', '<leader>vec', "<esc><cmd>lua require('jdtls').extract_constant(true)<cr>", opts)
+  --vim.keymap.set('x', '<leader>vem', "<esc><Cmd>lua require('jdtls').extract_method(true)<cr>", opts)
 end
 
 local function jdtls_setup(event)
