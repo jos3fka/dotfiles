@@ -23,6 +23,7 @@ eval $(keychain --eval --quiet --noask id_ed25519)
 
 # Exports
 export EDITOR=nvim
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
 
 # Aliases
 alias vim=nvim

@@ -18,6 +18,8 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
@@ -33,5 +35,5 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.background = "dark"
 vim.cmd('colorscheme gruvbox')
-vim.opt.laststatus = 0
+vim.opt.laststatus = 3
 vim.opt.foldenable = false
